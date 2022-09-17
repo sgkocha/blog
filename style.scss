@@ -133,6 +133,17 @@ body {
   }
 }
 
+.about{
+  border-bottom: 1px solid #dde1e4;
+}
+.title::before{
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 33px;
+  background-color: #e1e6ea;
+  margin-right: 10px;
+}
 .about__title {
   font-size: 36px;
   font-style: 700;
@@ -151,7 +162,20 @@ body {
   }
 }
 
-
+.social{
+  display: flex;
+}
+.social__icon{
+  width: 58px;
+  height: 58px;
+  background-color: #c8cdd0;
+  margin-left: 2px;
+  
+  img{
+    width: 100%;
+    padding: 15px;
+  }  
+}
 .about__info, .goals{
   align-self: start;
 }
@@ -184,6 +208,47 @@ body {
   margin-bottom: 38px;
 }
 
+.team{
+  margin-top: 75px;
+  &__title{
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #292f36;
+    margin-bottom: 65px;
+  }
+  &__member{
+    img{
+      width: 100%;
+    }
+  }
+  .row{
+    justify-content: space-between;
+  }
+}
+.member{
+  &__info{
+    background-color: #e1e6ea;
+    margin-top: -4px;
+  }
+  &__name{
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #292f36;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 12px;
+  }
+  &__about{
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #8d8f92;
+    padding-left: 15px;
+    padding-bottom: 18px;
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     width: 720px;
@@ -196,6 +261,10 @@ body {
   .col-md-2 {
     flex: 0 0 16.666667%;
     max-width: 16.666667%;
+  }
+  .col-md-3{
+    flex: 0 0 25%;
+    max-width: 25%;
   }
   .col-md-5{
     flex: 0 0 41.66%;
