@@ -187,13 +187,15 @@ body {
   height: 58px;
   background-color: #c8cdd0;
   margin-left: 2px;
+  text-align: center;
+  line-height: 96px;
 }
-.social__icon img {
-  width: 100%;
-  padding: 15px;
+.social__icon:hover {
+  opacity: 0.7;
 }
 
-.about__info, .goals {
+.about__info,
+.goals {
   align-self: start;
 }
 
@@ -229,6 +231,7 @@ body {
 
 .team {
   margin-top: 75px;
+  margin-bottom: 100px;
 }
 .team__title {
   font-size: 36px;
@@ -237,8 +240,24 @@ body {
   color: #292f36;
   margin-bottom: 65px;
 }
+.team__member {
+  position: relative;
+  transition: all 0.5s ease-out;
+}
 .team__member img {
   width: 100%;
+}
+.team__member:hover {
+  opacity: 0.7;
+}
+.team__member:hover .member__socials {
+  opacity: 1;
+}
+.team__member:hover .member__name {
+  color: #fff;
+}
+.team__member:hover .member__info {
+  background-color: #4e3e45;
 }
 .team .row {
   justify-content: space-between;
@@ -264,6 +283,78 @@ body {
   padding-left: 15px;
   padding-bottom: 18px;
 }
+.member__socials {
+  display: flex;
+  position: absolute;
+  top: 33%;
+  left: 20%;
+  opacity: 0;
+}
+.member__socials li {
+  width: 45px;
+  height: 45px;
+  background-color: #3a454d;
+  margin-left: 1px;
+}
+.member__socials li img {
+  width: 100%;
+}
+
+.work {
+  background-color: #3a454d;
+}
+.work__item {
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 28px;
+}
+.work__item img {
+  width: 100%;
+}
+.work__item:hover .work__info {
+  opacity: 1;
+}
+.work__title {
+  padding-top: 77px;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 64px;
+}
+.work__info {
+  opacity: 0;
+  width: 262px;
+  background-color: #292f36;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  padding-left: 12px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  position: absolute;
+  top: 68%;
+  left: 5%;
+}
+.work__more {
+  display: block;
+  align-self: center;
+  width: 148px;
+  height: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  margin: 45px auto;
+}
+.work__more:hover {
+  cursor: pointer;
+}
 
 @media (min-width: 768px) {
   .container {
@@ -281,6 +372,10 @@ body {
   .col-md-3 {
     flex: 0 0 25%;
     max-width: 25%;
+  }
+  .col-md-4 {
+    flex: 0 0 30.33%;
+    max-width: 30.33%;
   }
   .col-md-5 {
     flex: 0 0 41.66%;
