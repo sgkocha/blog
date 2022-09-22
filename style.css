@@ -6,6 +6,7 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: "Quattrocento Sans", sans-serif;
 }
 
@@ -41,6 +42,7 @@ body {
 .header {
   background-color: #1d2126;
   padding: 15px 0;
+  width: 101%;
 }
 
 .nav__list .list__item a {
@@ -201,19 +203,21 @@ body {
 }
 
 .goal {
-  display: flex;
+  position: relative;
 }
 
 .goal__num {
   width: 45px;
   height: 50px;
-  padding-left: 12px;
   background-color: #39a493;
   font-size: 20px;
   color: #fff;
-  margin-right: 20px;
   align-self: start;
   text-align: center;
+  line-height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .goal__title {
@@ -221,7 +225,8 @@ body {
   font-weight: 700;
   color: #292f36;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  margin-left: 58px;
+  margin-bottom: 12px;
 }
 
 .goal__desc {
@@ -229,6 +234,7 @@ body {
   font-size: 16px;
   color: #8d8f92;
   line-height: 23px;
+  margin-left: 58px;
   margin-bottom: 38px;
 }
 
@@ -245,16 +251,15 @@ body {
 }
 .team__member {
   position: relative;
-  transition: all 0.5s ease-out;
 }
 .team__member img {
   width: 100%;
 }
-.team__member:hover {
-  opacity: 0.7;
+.team__member:hover .member__img {
+  background-color: #dcdfe1;
 }
 .team__member:hover .member__socials {
-  opacity: 1;
+  display: flex;
 }
 .team__member:hover .member__name {
   color: #fff;
@@ -287,11 +292,10 @@ body {
   padding-bottom: 18px;
 }
 .member__socials {
-  display: flex;
+  display: none;
   position: absolute;
   top: 33%;
   left: 20%;
-  opacity: 0;
 }
 .member__socials li {
   width: 45px;
@@ -450,12 +454,16 @@ body {
     max-width: 33.33%;
   }
   .col-md-5 {
-    flex: 0 0 41.66%;
-    max-width: 41.66%;
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
   .col-md-7 {
-    flex: 0 0 58.33%;
-    min-width: 58.33%;
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
   }
   .col-md-8 {
     flex: 0 0 66.66667%;
