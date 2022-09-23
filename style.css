@@ -397,6 +397,7 @@ body {
 
 .features {
   background-color: #3a454d;
+  padding-bottom: 122px;
 }
 .features .row {
   justify-content: space-between;
@@ -430,6 +431,80 @@ body {
   font-size: 16px;
   color: #dcdfe1;
   line-height: 23px;
+}
+
+.stay-in-touch__title {
+  padding-top: 65px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 700;
+  color: #292f36;
+}
+.stay-in-touch .contact__title {
+  padding-left: 12px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  color: #292f36;
+  margin-bottom: 42px;
+}
+.stay-in-touch .contact__about p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #8d8f92;
+  line-height: 23px;
+  margin-bottom: 36px;
+}
+.stay-in-touch .contact__about p span {
+  font-weight: 700;
+}
+.stay-in-touch .contact__form {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px;
+  border: 1px solid #000;
+}
+.stay-in-touch .contact__form label {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #8d8f92;
+}
+.stay-in-touch .contact__form input {
+  width: 235px;
+  height: 42px;
+  background-color: #eaeef1;
+  border: 1px solid #eaeef1;
+  border-radius: 4px;
+}
+.stay-in-touch .contact__form textarea {
+  width: 490px;
+  height: 158px;
+  background-color: #eaeef1;
+  border: 1px solid #eaeef1;
+}
+.stay-in-touch .contact__form .input-wrapper {
+  display: flex;
+}
+.stay-in-touch .contact__form .input-wrapper div {
+  margin-right: 14px;
+}
+.stay-in-touch .contact__form__btn {
+  display: block;
+  margin-top: 27px;
+  width: 146px;
+  height: 44px;
+  background-color: #23b7a4;
+  border: 1px solid #23b7a4;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
 }
 
 @media (min-width: 768px) {
