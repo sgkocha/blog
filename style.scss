@@ -135,6 +135,7 @@ body {
 }
 
 .about {
+  padding-bottom: 100px;
   border-bottom: 1px solid #dde1e4;
 }
 .title::before {
@@ -231,10 +232,6 @@ body {
       width: 100%;
     }
     &:hover {
-      .member__img {
-        //background-color: rgba(155, 158, 156, 0.5);
-        background-color: #dcdfe1;
-      }
       .member__socials {
         display: flex;
       }
@@ -273,9 +270,11 @@ body {
   }
   &__socials {
     display: none;
+    align-items: center;
     position: absolute;
     top: 33%;
     left: 20%;
+
     li {
       width: 45px;
       height: 45px;
@@ -310,7 +309,7 @@ body {
   }
   &__info {
     opacity: 0;
-    width: 262px;
+    width: 293px;
     background-color: #292f36;
     text-transform: uppercase;
     font-size: 18px;
@@ -320,8 +319,8 @@ body {
     padding-top: 21px;
     padding-bottom: 21px;
     position: absolute;
-    top: 68%;
-    left: 5%;
+    top: 71%;
+    left: 4%;
   }
   &__more {
     display: block;
@@ -415,6 +414,7 @@ body {
   }
 }
 .stay-in-touch {
+  position: relative;
   &__title {
     padding-top: 65px;
     margin-bottom: 60px;
@@ -423,8 +423,9 @@ body {
     font-weight: 700;
     color: #292f36;
   }
-  .contact {
+  .contact {    
     &__title {
+      margin-top: 60px;
       padding-left: 12px;
       text-transform: uppercase;
       font-size: 20px;
@@ -448,7 +449,11 @@ body {
     &__form{
       width: fit-content;
       padding: 15px;
-      border: 1px solid #000;
+      background-color: #fff;
+      border: 1px solid #fff;
+      position: absolute;
+      top: 50%;
+      right: 11%; 
       label{
         display: block;
         margin-top: 30px;
@@ -463,12 +468,18 @@ body {
         background-color: #eaeef1;
         border: 1px solid #eaeef1;
         border-radius: 4px;
+        &:focus{
+          outline: none;
+        }
       }
       textarea{
         width: 490px;
         height: 158px;
         background-color: #eaeef1;
         border: 1px solid #eaeef1;
+        &:focus{
+          outline: none;
+        }
       }
       .input-wrapper{
         display: flex;
