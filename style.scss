@@ -30,6 +30,14 @@ body {
   flex: 0 0 100%;
   max-width: 100%;
 }
+.col-xs-7 {
+  flex: 0 0 58.3333333333%;
+  max-width: 58.3333333333%;
+}
+.col-xs-5{
+  flex: 0 0 41.6666666667%;
+  max-width: 41.6666666667%;
+}
 .hidden-xs {
   display: none;
 }
@@ -39,6 +47,7 @@ body {
   padding: 15px 0;
   width: 101%;
 }
+
 .nav__list {
   .list__item {
     a {
@@ -423,7 +432,7 @@ body {
     font-weight: 700;
     color: #292f36;
   }
-  .contact {    
+  .contact {
     &__title {
       margin-top: 60px;
       padding-left: 12px;
@@ -432,7 +441,6 @@ body {
       font-weight: 700;
       color: #292f36;
       margin-bottom: 42px;
-      
     }
     &__about {
       p {
@@ -441,20 +449,20 @@ body {
         color: #8d8f92;
         line-height: 23px;
         margin-bottom: 36px;
-        span{
+        span {
           font-weight: 700;
         }
       }
     }
-    &__form{
+    &__form {
       width: fit-content;
       padding: 15px;
       background-color: #fff;
       border: 1px solid #fff;
       position: absolute;
       top: 50%;
-      right: 11%; 
-      label{
+      right: 11%;
+      label {
         display: block;
         margin-top: 30px;
         margin-bottom: 10px;
@@ -462,32 +470,32 @@ body {
         font-size: 14px;
         color: #8d8f92;
       }
-      input{
+      input {
         width: 235px;
         height: 42px;
         background-color: #eaeef1;
         border: 1px solid #eaeef1;
         border-radius: 4px;
-        &:focus{
+        &:focus {
           outline: none;
         }
       }
-      textarea{
+      textarea {
         width: 490px;
         height: 158px;
         background-color: #eaeef1;
         border: 1px solid #eaeef1;
-        &:focus{
+        &:focus {
           outline: none;
         }
       }
-      .input-wrapper{
+      .input-wrapper {
         display: flex;
-        div{
+        div {
           margin-right: 14px;
         }
       }
-      &__btn{
+      &__btn {
         display: block;
         margin-top: 27px;
         width: 146px;
@@ -547,4 +555,92 @@ body {
     display: flex;
     height: 662px;
   }
+}
+.modal-block {
+  width: 300px;
+  height: 200px;
+  margin: 100px auto;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+.form-field {
+  margin: 15px 0;
+}
+.btn-close {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+
+@media (max-width: 767px) {
+  .header__logo{
+    text-align: center;
+  }
+  .nav-mobile-menu {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    margin: 10px auto;
+
+    span {
+      height: 1px;
+      background-color: white;
+      position: absolute;
+      left: 0;
+      right: 0;
+      transition: 0.25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 3px;
+      }
+      &:nth-child(2) {
+        top: 7px;
+      }
+      &:nth-child(3) {
+        bottom: 3px;
+      }
+    }
+  }
+  .active-menu {
+    span {
+        &:nth-child(1) {
+            top:50%;
+            transform: rotate(45deg);
+          }
+          &:nth-child(2) {
+            top:50%;
+            transform: rotate(-45deg);
+          }
+          &:nth-child(3) {
+            transform: scale(0);
+          } 
+    }
+}
+  .nav{
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    max-width: 260px;
+    width: 260px;
+    transform: translateX(150%);
+    opacity: 0;
+    visibility: hidden;
+    &.active-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+      top: 62px;
+      right: 34%;
+      height: fit-content;
+      padding-bottom: 10px;
+      background-color: #1d2126;
+      ul {
+          flex-direction: column;
+      }
+  }
+  } 
 }
